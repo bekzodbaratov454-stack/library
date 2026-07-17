@@ -1,0 +1,12 @@
+Dockerga yuborish
+docker-compose up --build
+
+
+
+To'xtatish
+docker-compose down
+
+
+
+Qayta build qilib ishga tushirish
+docker-compose up --build

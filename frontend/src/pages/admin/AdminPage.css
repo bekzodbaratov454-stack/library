@@ -1,0 +1,220 @@
+.admin-page {
+  min-height: 100vh;
+}
+
+/* Header */
+.admin-header {
+  background: var(--ink);
+  border-bottom: 2px solid rgba(201, 162, 75, 0.3);
+  padding: 28px 24px 0;
+}
+
+.admin-header__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.admin-header__title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin-header__icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
+
+.admin-header__title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--paper);
+}
+
+.admin-header__sub {
+  font-size: 13px;
+  color: rgba(250, 246, 238, 0.5);
+  margin-top: 2px;
+}
+
+/* Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.admin-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(250, 246, 238, 0.6);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  transition: all var(--transition);
+  border-bottom: 2px solid transparent;
+  position: relative;
+  bottom: -2px;
+}
+
+.admin-tab:hover {
+  color: var(--paper);
+  background: rgba(250, 246, 238, 0.06);
+}
+
+.admin-tab--active {
+  color: var(--gold);
+  background: var(--paper);
+  border-color: var(--gold);
+}
+
+/* Content */
+.admin-content {
+  padding: 32px 24px 80px;
+  background: var(--paper);
+}
+
+.admin-content__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Shared table styles */
+.admin-table-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table th {
+  background: var(--ink);
+  color: rgba(250, 246, 238, 0.7);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover td {
+  background: rgba(201, 162, 75, 0.03);
+}
+
+.admin-table .mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Section header */
+.admin-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-section-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Actions row */
+.admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Empty */
+.admin-empty {
+  padding: 60px 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Overflow-x scroll on small screens */
+@media (max-width: 768px) {
+  .admin-table-wrap {
+    overflow-x: auto;
+  }
+}
+
+/* Pagination */
+.admin-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 0 4px;
+}
+
+.admin-pagination__info {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  min-width: 60px;
+  text-align: center;
+}
+
+.admin-pagination__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ink);
+  transition: all var(--transition);
+}
+
+.admin-pagination__btn:hover:not(:disabled) {
+  border-color: var(--gold);
+  background: rgba(201,162,75,0.08);
+}
+
+.admin-pagination__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
